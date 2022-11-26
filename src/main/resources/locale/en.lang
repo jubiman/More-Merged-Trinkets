@@ -1,19 +1,38 @@
-[tile]
-exampletile=Example Tile
-
-[object]
-exampleobject=Example Object
-
 [item]
-exampleitem=Example Item
-examplesword=Example Sword
-examplestaff=Example Staff
+arcticexplorersequipment=Arctic Explorer's Equipment
+arcticadventurersequipment=Arctic Adventurer's Equipment
+assassinsbackupplan=Assassin's Backup Plan
+calmingminershelmet=Calming Miners Helmet
+calmingminersequipment=Calming Miners Equipment
+gamblersblessing=Gambler's Blessing
+necromancersbrooch=Necromancer's Brooch
+odinsbalancedfrostfiresoul=Odin's Balanced Frost Fire Soul
 
 [itemtooltip]
-examplestafftip=Shoots a homing, piercing projectile
-
-[mob]
-examplemob=Example Mob
-
-[buff]
-examplebuff=Example Buff
+necromancershield1=+3 max summons
+necromancershield2=+77% summons speed
+necromancershield3=+77% summons damage
+necromancershield4=+77% summons range
+calmingmininghelmet1=+100% tool damage
+calmingmininghelmet2=+75% mining speed
+calmingmininghelmet3=-2 mining range
+calmingmininghelmet4=Reduces mob spawn rate
+calmingminersequipment1=+100% tool damage
+calmingminersequipment2=+75% mining speed
+calmingminersequipment3=+75% building speed
+calmingminersequipment4=+2 building range
+calmingminersequipment5=+2 mining range
+calmingminersequipment6=+7 item pickup range
+calmingminersequipment7=Reduces mob spawn rate
+arcticexplorersequipment1=+35% movement speed
+arcticexplorersequipment2=+10% attack speed
+arcticexplorersequipment3=Extends travel and biome view range by 1
+arcticexplorersequipment4=Gives land and sea mobility out of combat
+arcticexplorersequipment5=Gives knockback resistance
+arcticexplorersequipment6=Prevents skating around
+arcticexplorersequipment7=Attacks slow the target
+arcticadventurersequipment1=Adds 2 dash charges
+arcticadventurersequipment2=-50% dash cooldowns
+arcticadventurersequipment3=+2.5 health regeneration
+gamblersblessing1=+50% crit chance
+gamblersblessing2=Has a small chance to deal 7x damage
