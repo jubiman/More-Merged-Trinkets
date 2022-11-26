@@ -8,6 +8,7 @@ import necesse.inventory.item.trinketItem.TrinketItem;
 public class KomatsuPC210_10M0 extends TrinketItem {
 	public KomatsuPC210_10M0() {
 		super(Rarity.LEGENDARY, 1000);
+		addDisables("calmingminershelmet");
 	}
 
 	@Override

@@ -10,6 +10,7 @@ public class CalmingMinersHelmet extends TrinketItem {
 
 	public CalmingMinersHelmet() {
 		super(Rarity.EPIC, 1000);
+		addDisabledBy("komatsupc210-10m0");
 	}
 
 	@Override

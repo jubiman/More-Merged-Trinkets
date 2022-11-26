@@ -8,6 +8,7 @@ import necesse.inventory.item.trinketItem.TrinketItem;
 public class ArcticAdventurersEquipment extends TrinketItem {
 	public ArcticAdventurersEquipment() {
 		super(Rarity.LEGENDARY, 1000);
+		addDisables("arcticexplorersequipment");
 	}
 
 	@Override
