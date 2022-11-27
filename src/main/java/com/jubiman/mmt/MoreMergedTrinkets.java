@@ -143,6 +143,7 @@ public class MoreMergedTrinkets {
 						new Ingredient("frozensoul", 1),
 						new Ingredient("frozenwave", 1),
 						new Ingredient("lifependant", 1),
+						new Ingredient("shellofretribution", 1),
 				}
 		).showAfter("balancedfrostfirefoci"));
 
