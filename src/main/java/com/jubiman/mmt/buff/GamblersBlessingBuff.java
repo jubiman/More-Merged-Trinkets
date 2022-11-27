@@ -27,7 +27,8 @@ public class GamblersBlessingBuff extends TrinketBuff {
 		if (!hitEvent.isPrevented()) {
 			if (GameRandom.globalRandom.nextFloat() < 0.01f)
 				hitEvent.modifiedDamage *= 7;
-			LootItemInterface lastItem = hitEvent.mob.getLootTable().items.get(hitEvent.mob.getLootTable().items.size() - 1);
+			LootItemInterface lastItem = hitEvent.mob.getLootTable().items.size() > 0 ? hitEvent.mob.getLootTable().items.get(hitEvent.mob.getLootTable().items.size() - 1) : null;
+			if (lastItem == null) return;
 			if (!(lastItem instanceof LootItem) || !Objects.equals(((LootItem) lastItem).itemStringID, "coin"))
 				hitEvent.mob.getLootTable().items.add(new LootItem("coin", GameRandom.globalRandom.nextInt(7)));
 		}
