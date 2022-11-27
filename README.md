@@ -1,3 +1,3 @@
-An example mod for Necesse.
+Creates further merged trinkets. Gotta wear them all!
 
-Check out the [modding wiki page](https://necessewiki.com/Modding) for more.
+Issues on github: https://github.com/jubiman/More-Merged-Trinkets/issues
