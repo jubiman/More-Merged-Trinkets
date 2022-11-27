@@ -28,7 +28,7 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 		activeBuff.setModifier(BuffModifiers.ATTACK_SPEED, 0.10f);
 		activeBuff.setModifier(BuffModifiers.KNOCKBACK_INCOMING, 0f);
 		activeBuff.setModifier(BuffModifiers.EMITS_LIGHT, true);
-		activeBuff.setModifier(BuffModifiers.FRICTION, 0f);
+		activeBuff.setMinModifier(BuffModifiers.FRICTION, 1.0f);
 		activeBuff.setModifier(BuffModifiers.TRAVEL_DISTANCE, 1);
 		activeBuff.setModifier(BuffModifiers.BIOME_VIEW_DISTANCE, 1);
 	}
