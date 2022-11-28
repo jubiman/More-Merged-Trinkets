@@ -21,6 +21,7 @@ public class MoreMergedTrinkets {
 	public void init() {
 		System.out.println("MMT init");
 
+		// Buffs
 		BuffRegistry.registerBuff("necromancersbrooch", new NecromancersBroochBuff());
 		BuffRegistry.registerBuff("calmingminershelmet", new CalmingMiningHelmetBuff());
 		BuffRegistry.registerBuff("komatsupc210-10m0", new KomatsuPC210_10M0());
@@ -173,7 +174,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.NONE,
 				new Ingredient[]{
-						new Ingredient("anylog", 333),
+						new Ingredient("anylog", 111),
 				}
 		).showAfter("woodboat"));
 
@@ -182,7 +183,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
-						new Ingredient("copperbar", 333),
+						new Ingredient("copperbar", 111),
 						new Ingredient("woodsingularity", 1),
 				}
 		).showAfter("copperbow"));
@@ -192,7 +193,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
-						new Ingredient("ironbar", 333),
+						new Ingredient("ironbar", 111),
 						new Ingredient("coppersingularity", 1),
 				}
 		).showAfter("ironbow"));
@@ -202,7 +203,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
-						new Ingredient("goldbar", 333),
+						new Ingredient("goldbar", 111),
 						new Ingredient("ironsingularity", 1),
 				}
 		).showAfter("goldbow"));
@@ -212,7 +213,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
-						new Ingredient("frostshard", 333),
+						new Ingredient("frostshard", 111),
 						new Ingredient("goldsingularity", 1),
 				}
 		).showAfter("froststaff"));
@@ -222,7 +223,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
-						new Ingredient("demonicbar", 333),
+						new Ingredient("demonicbar", 111),
 						new Ingredient("frostsingularity", 1),
 				}
 		).showAfter("demonicbow"));
@@ -232,7 +233,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
-						new Ingredient("voidshard", 333),
+						new Ingredient("voidshard", 111),
 						new Ingredient("demonicsingularity", 1),
 				}
 		).showAfter("demonicboots"));
@@ -242,7 +243,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
-						new Ingredient("quartz", 333),
+						new Ingredient("quartz", 111),
 						new Ingredient("voidsingularity", 1),
 				}
 		).showAfter("quartzstaff"));
@@ -252,7 +253,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
-						new Ingredient("ivybar", 333),
+						new Ingredient("ivybar", 111),
 						new Ingredient("quartzsingularity", 1),
 				}
 		).showAfter("boulderstaff"));
@@ -262,7 +263,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("tungstenbar", 333),
+						new Ingredient("tungstenbar", 111),
 						new Ingredient("ivysingularity", 1),
 				}
 		).showAfter("tungstenbow"));
@@ -272,7 +273,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("obsidian", 333),
+						new Ingredient("obsidian", 111),
 						new Ingredient("tungstensingularity", 1),
 				}
 		).showAfter("cookingstation"));
@@ -282,8 +283,8 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("ectoplasm", 333),
-						new Ingredient("bone", 333),
+						new Ingredient("ectoplasm", 111),
+						new Ingredient("bone", 111),
 						new Ingredient("obsidiansingularity", 1),
 				}
 		).showAfter("tungstenboots"));
@@ -293,7 +294,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("glacialbar", 333),
+						new Ingredient("glacialbar", 111),
 						new Ingredient("shadowsingularity", 1),
 				}
 		).showAfter("glacialbow"));
@@ -303,7 +304,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("myceliumbar", 333),
+						new Ingredient("myceliumbar", 111),
 						new Ingredient("glacialsingularity", 1),
 				}
 		).showAfter("myceliumshovel"));
@@ -313,7 +314,7 @@ public class MoreMergedTrinkets {
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("ancientfossilbar", 333),
+						new Ingredient("ancientfossilbar", 111),
 						new Ingredient("myceliumsingularity", 1),
 				}
 		).showAfter("ancientdredgingstaff"));

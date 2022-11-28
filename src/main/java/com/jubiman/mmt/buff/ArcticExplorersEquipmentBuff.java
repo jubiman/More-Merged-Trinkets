@@ -11,6 +11,7 @@ import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.OutOfCombat
 import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.TrinketBuff;
 import necesse.entity.particle.Particle;
 import necesse.gfx.gameTooltips.ListGameTooltips;
+import necesse.inventory.item.trinketItem.CombinedTrinketItem;
 import necesse.level.gameTile.GameTile;
 import necesse.level.gameTile.LiquidTile;
 
@@ -18,21 +19,6 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
-	@Override
-	public void init(ActiveBuff activeBuff) {
-		buffs(activeBuff);
-	}
-	
-	public static void buffs(ActiveBuff activeBuff) {
-		activeBuff.setModifier(BuffModifiers.SPEED, 0.35f);
-		activeBuff.setModifier(BuffModifiers.ATTACK_SPEED, 0.10f);
-		activeBuff.setModifier(BuffModifiers.KNOCKBACK_INCOMING, 0f);
-		activeBuff.setModifier(BuffModifiers.EMITS_LIGHT, true);
-		activeBuff.setMinModifier(BuffModifiers.FRICTION, 1.0f);
-		activeBuff.setModifier(BuffModifiers.TRAVEL_DISTANCE, 1);
-		activeBuff.setModifier(BuffModifiers.BIOME_VIEW_DISTANCE, 1);
-	}
-	
 	public static void tooltips(ListGameTooltips tooltips) {
 		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment1"));
 		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment2"));
@@ -43,6 +29,7 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment7"));
 	}
 
+	@Override
 	public void tickEffect(ActiveBuff buff, Mob owner) {
 		if (isActive(buff) && (owner.dx != 0.0F || owner.dy != 0.0F)) {
 			Color color;
@@ -74,13 +61,18 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 		}
 	}
 
-	protected void updateActive(ActiveBuff buff, boolean active) {
-		buff.setModifier(BuffModifiers.TRAVEL_DISTANCE, 1);
-		buff.setModifier(BuffModifiers.BIOME_VIEW_DISTANCE, 1);
+	@Override
+	protected void updateActive(ActiveBuff activeBuff, boolean active) {
+		activeBuff.setModifier(BuffModifiers.SPEED, 0.35f);
+		activeBuff.setModifier(BuffModifiers.ATTACK_SPEED, 0.10f);
+		activeBuff.setModifier(BuffModifiers.KNOCKBACK_INCOMING, 0f);
+		activeBuff.setModifier(BuffModifiers.EMITS_LIGHT, true);
+		activeBuff.setMinModifier(BuffModifiers.FRICTION, 1.0f);
+		activeBuff.setModifier(BuffModifiers.TRAVEL_DISTANCE, 1);
+		activeBuff.setModifier(BuffModifiers.BIOME_VIEW_DISTANCE, 1);
 		if (active) {
-			buff.setModifier(BuffModifiers.SPEED_FLAT, 5.0F);
-			buff.setModifier(BuffModifiers.SPEED, 0.15F);
-			buff.setModifier(BuffModifiers.SWIM_SPEED, 1.0F);
+			activeBuff.setModifier(BuffModifiers.SPEED_FLAT, 5.0F);
+			activeBuff.setModifier(BuffModifiers.SWIM_SPEED, 1.0F);
 		}
 	}
 
