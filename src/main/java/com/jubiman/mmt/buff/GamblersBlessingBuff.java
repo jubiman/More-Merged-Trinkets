@@ -36,9 +36,9 @@ public class GamblersBlessingBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(Localization.translate("itemtooltip", "gamblersblessing1"));
-		tooltips.add(Localization.translate("itemtooltip", "gamblersblessing2"));
-		tooltips.add(Localization.translate("itemtooltip", "gamblersblessing3"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_gamblersblessing1"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_gamblersblessing2"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_gamblersblessing3"));
 		return tooltips;
 	}
 }

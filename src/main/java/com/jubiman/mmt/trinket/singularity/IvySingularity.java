@@ -12,6 +12,6 @@ public class IvySingularity extends TrinketItem {
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("ivysingularity")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_ivysingularity")};
 	}
 }

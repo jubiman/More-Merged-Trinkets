@@ -14,7 +14,7 @@ public class TungstenSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 30));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 30));
 		return tooltips;
 	}
 }

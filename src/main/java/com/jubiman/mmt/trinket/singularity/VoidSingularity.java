@@ -12,6 +12,6 @@ public class VoidSingularity extends TrinketItem {
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("voidsingularity")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_voidsingularity")};
 	}
 }

@@ -23,13 +23,13 @@ public class KomatsuPC210_10M0 extends TrinketBuff {
 	}
 
 	public static void tooltips(ListGameTooltips tooltips) {
-		tooltips.add(Localization.translate("itemtooltip", "calmingminersequipment1"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingminersequipment2"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingminersequipment3"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingminersequipment4"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingminersequipment5"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingminersequipment6"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingminersequipment7"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingminersequipment1"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingminersequipment2"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingminersequipment3"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingminersequipment4"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingminersequipment5"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingminersequipment6"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingminersequipment7"));
 	}
 
 	public ListGameTooltips getTrinketTooltip() {

@@ -14,7 +14,7 @@ public class QuartzSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 20));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 20));
 		return tooltips;
 	}
 }

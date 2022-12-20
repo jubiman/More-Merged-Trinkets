@@ -14,7 +14,7 @@ public class IvySingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 25));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 25));
 		return tooltips;
 	}
 }

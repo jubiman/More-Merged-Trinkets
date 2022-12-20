@@ -14,7 +14,7 @@ public class MyceliumSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 50));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 50));
 		return tooltips;
 	}
 }

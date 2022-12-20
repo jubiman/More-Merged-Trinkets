@@ -12,6 +12,6 @@ public class NecromancersBrooch extends TrinketItem {
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem item) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("necromancersbrooch")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_necromancersbrooch")};
 	}
 }

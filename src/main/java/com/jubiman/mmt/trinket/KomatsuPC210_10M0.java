@@ -8,11 +8,11 @@ import necesse.inventory.item.trinketItem.TrinketItem;
 public class KomatsuPC210_10M0 extends TrinketItem {
 	public KomatsuPC210_10M0() {
 		super(Rarity.LEGENDARY, 1000);
-		addDisables("calmingminershelmet");
+		addDisables("mmt_calmingminershelmet");
 	}
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("komatsupc210-10m0")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_komatsupc210-10m0")};
 	}
 }

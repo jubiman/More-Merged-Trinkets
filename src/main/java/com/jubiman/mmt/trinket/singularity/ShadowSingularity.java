@@ -12,6 +12,6 @@ public class ShadowSingularity extends TrinketItem {
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("shadowsingularity")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_shadowsingularity")};
 	}
 }

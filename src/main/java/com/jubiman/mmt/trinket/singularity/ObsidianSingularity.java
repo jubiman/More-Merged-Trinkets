@@ -12,6 +12,6 @@ public class ObsidianSingularity extends TrinketItem {
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("obsidiansingularity")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_obsidiansingularity")};
 	}
 }

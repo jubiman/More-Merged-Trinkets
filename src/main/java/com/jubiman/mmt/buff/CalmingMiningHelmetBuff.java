@@ -17,10 +17,10 @@ public class CalmingMiningHelmetBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(Localization.translate("itemtooltip", "calmingmininghelmet1"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingmininghelmet2"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingmininghelmet3"));
-		tooltips.add(Localization.translate("itemtooltip", "calmingmininghelmet4"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet1"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet2"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet3"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet4"));
 		return tooltips;
 	}
 }

@@ -12,6 +12,6 @@ public class QuartzSingularity extends TrinketItem {
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("quartzsingularity")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_quartzsingularity")};
 	}
 }

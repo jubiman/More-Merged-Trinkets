@@ -22,62 +22,62 @@ public class MoreMergedTrinkets {
 		System.out.println("MMT init");
 
 		// Buffs
-		BuffRegistry.registerBuff("necromancersbrooch", new NecromancersBroochBuff());
-		BuffRegistry.registerBuff("calmingminershelmet", new CalmingMiningHelmetBuff());
-		BuffRegistry.registerBuff("komatsupc210-10m0", new KomatsuPC210_10M0());
-		BuffRegistry.registerBuff("arcticexplorersequipment", new ArcticExplorersEquipmentBuff());
-		BuffRegistry.registerBuff("arcticadventurersequipment", new ArcticAdventurersEquipmentBuff());
-		BuffRegistry.registerBuff("gamblersblessing", new GamblersBlessingBuff());
+		BuffRegistry.registerBuff("mmt_necromancersbrooch", new NecromancersBroochBuff());
+		BuffRegistry.registerBuff("mmt_calmingminershelmet", new CalmingMiningHelmetBuff());
+		BuffRegistry.registerBuff("mmt_komatsupc210-10m0", new KomatsuPC210_10M0());
+		BuffRegistry.registerBuff("mmt_arcticexplorersequipment", new ArcticExplorersEquipmentBuff());
+		BuffRegistry.registerBuff("mmt_arcticadventurersequipment", new ArcticAdventurersEquipmentBuff());
+		BuffRegistry.registerBuff("mmt_gamblersblessing", new GamblersBlessingBuff());
 
 		// SingularityBuffs
-		BuffRegistry.registerBuff("woodsingularity", new WoodSingularityBuff());
-		BuffRegistry.registerBuff("coppersingularity", new CopperSingularityBuff());
-		BuffRegistry.registerBuff("ironsingularity", new IronSingularityBuff());
-		BuffRegistry.registerBuff("goldsingularity", new GoldSingularityBuff());
-		BuffRegistry.registerBuff("frostsingularity", new FrostSingularityBuff());
-		BuffRegistry.registerBuff("demonicsingularity", new DemonicSingularityBuff());
-		BuffRegistry.registerBuff("quartzsingularity", new QuartzSingularityBuff());
-		BuffRegistry.registerBuff("ivysingularity", new IvySingularityBuff());
-		BuffRegistry.registerBuff("voidsingularity", new VoidSingularityBuff());
-		BuffRegistry.registerBuff("tungstensingularity", new TungstenSingularityBuff());
-		BuffRegistry.registerBuff("obsidiansingularity", new ObsidianSingularityBuff());
-		BuffRegistry.registerBuff("shadowsingularity", new ShadowSingularityBuff());
-		BuffRegistry.registerBuff("glacialsingularity", new GlacialSingularityBuff());
-		BuffRegistry.registerBuff("myceliumsingularity", new MyceliumSingularityBuff());
-		BuffRegistry.registerBuff("ancientsingularity", new AncientSingularityBuff());
+		BuffRegistry.registerBuff("mmt_woodsingularity", new WoodSingularityBuff());
+		BuffRegistry.registerBuff("mmt_coppersingularity", new CopperSingularityBuff());
+		BuffRegistry.registerBuff("mmt_ironsingularity", new IronSingularityBuff());
+		BuffRegistry.registerBuff("mmt_goldsingularity", new GoldSingularityBuff());
+		BuffRegistry.registerBuff("mmt_frostsingularity", new FrostSingularityBuff());
+		BuffRegistry.registerBuff("mmt_demonicsingularity", new DemonicSingularityBuff());
+		BuffRegistry.registerBuff("mmt_quartzsingularity", new QuartzSingularityBuff());
+		BuffRegistry.registerBuff("mmt_ivysingularity", new IvySingularityBuff());
+		BuffRegistry.registerBuff("mmt_voidsingularity", new VoidSingularityBuff());
+		BuffRegistry.registerBuff("mmt_tungstensingularity", new TungstenSingularityBuff());
+		BuffRegistry.registerBuff("mmt_obsidiansingularity", new ObsidianSingularityBuff());
+		BuffRegistry.registerBuff("mmt_shadowsingularity", new ShadowSingularityBuff());
+		BuffRegistry.registerBuff("mmt_glacialsingularity", new GlacialSingularityBuff());
+		BuffRegistry.registerBuff("mmt_myceliumsingularity", new MyceliumSingularityBuff());
+		BuffRegistry.registerBuff("mmt_ancientsingularity", new AncientSingularityBuff());
 
 		// Register our items
-		ItemRegistry.registerItem("assassinsbackupplan", new AssassinsBackupPlan(), 777, true);
-		ItemRegistry.registerItem("arcticexplorersequipment", new ArcticExplorersEquipment(), 777, true);
-		ItemRegistry.registerItem("arcticadventurersequipment", new ArcticAdventurersEquipment(), 7777, true);
-		ItemRegistry.registerItem("odinsbalancedfrostfiresoul", new OdinsBalancedFrostFireSoul(), 7777, true);
-		ItemRegistry.registerItem("necromancersbrooch", new NecromancersBrooch(), 7777, true);
-		ItemRegistry.registerItem("calmingminershelmet", new CalmingMinersHelmet(), 777, true);
-		ItemRegistry.registerItem("komatsupc210-10m0", new com.jubiman.mmt.trinket.KomatsuPC210_10M0(), 7777, true);
-		ItemRegistry.registerItem("gamblersblessing", new GamblersBlessing(), 7777, true);
+		ItemRegistry.registerItem("mmt_assassinsbackupplan", new AssassinsBackupPlan(), 777, true);
+		ItemRegistry.registerItem("mmt_arcticexplorersequipment", new ArcticExplorersEquipment(), 777, true);
+		ItemRegistry.registerItem("mmt_arcticadventurersequipment", new ArcticAdventurersEquipment(), 7777, true);
+		ItemRegistry.registerItem("mmt_odinsbalancedfrostfiresoul", new OdinsBalancedFrostFireSoul(), 7777, true);
+		ItemRegistry.registerItem("mmt_necromancersbrooch", new NecromancersBrooch(), 7777, true);
+		ItemRegistry.registerItem("mmt_calmingminershelmet", new CalmingMinersHelmet(), 777, true);
+		ItemRegistry.registerItem("mmt_komatsupc210-10m0", new com.jubiman.mmt.trinket.KomatsuPC210_10M0(), 7777, true);
+		ItemRegistry.registerItem("mmt_gamblersblessing", new GamblersBlessing(), 7777, true);
 
 		// Singularities
-		ItemRegistry.registerItem("woodsingularity", new WoodSingularity(), 3, true);
-		ItemRegistry.registerItem("coppersingularity", new CopperSingularity(), 5, true);
-		ItemRegistry.registerItem("ironsingularity", new IronSingularity(), 7, true);
-		ItemRegistry.registerItem("goldsingularity", new GoldSingularity(), 10, true);
-		ItemRegistry.registerItem("frostsingularity", new FrostSingularity(), 33, true);
-		ItemRegistry.registerItem("demonicsingularity", new DemonicSingularity(), 66.6f, true);
-		ItemRegistry.registerItem("quartzsingularity", new QuartzSingularity(), 100, true);
-		ItemRegistry.registerItem("ivysingularity", new IvySingularity(), 120, true);
-		ItemRegistry.registerItem("voidsingularity", new VoidSingularity(), 150, true);
-		ItemRegistry.registerItem("tungstensingularity", new TungstenSingularity(), 222, true);
-		ItemRegistry.registerItem("obsidiansingularity", new ObsidianSingularity(), 333, true);
-		ItemRegistry.registerItem("shadowsingularity", new ShadowSingularity(), 666, true);
-		ItemRegistry.registerItem("glacialsingularity", new GlacialSingularity(), 777, true);
-		ItemRegistry.registerItem("myceliumsingularity", new MyceliumSingularity(), 3333, true);
-		ItemRegistry.registerItem("ancientsingularity", new AncientSingularity(), 7777, true);
+		ItemRegistry.registerItem("mmt_woodsingularity", new WoodSingularity(), 3, true);
+		ItemRegistry.registerItem("mmt_coppersingularity", new CopperSingularity(), 5, true);
+		ItemRegistry.registerItem("mmt_ironsingularity", new IronSingularity(), 7, true);
+		ItemRegistry.registerItem("mmt_goldsingularity", new GoldSingularity(), 10, true);
+		ItemRegistry.registerItem("mmt_frostsingularity", new FrostSingularity(), 33, true);
+		ItemRegistry.registerItem("mmt_demonicsingularity", new DemonicSingularity(), 66.6f, true);
+		ItemRegistry.registerItem("mmt_quartzsingularity", new QuartzSingularity(), 100, true);
+		ItemRegistry.registerItem("mmt_ivysingularity", new IvySingularity(), 120, true);
+		ItemRegistry.registerItem("mmt_voidsingularity", new VoidSingularity(), 150, true);
+		ItemRegistry.registerItem("mmt_tungstensingularity", new TungstenSingularity(), 222, true);
+		ItemRegistry.registerItem("mmt_obsidiansingularity", new ObsidianSingularity(), 333, true);
+		ItemRegistry.registerItem("mmt_shadowsingularity", new ShadowSingularity(), 666, true);
+		ItemRegistry.registerItem("mmt_glacialsingularity", new GlacialSingularity(), 777, true);
+		ItemRegistry.registerItem("mmt_myceliumsingularity", new MyceliumSingularity(), 3333, true);
+		ItemRegistry.registerItem("mmt_ancientsingularity", new AncientSingularity(), 7777, true);
 	}
 
 	public void postInit() {
 		// Add recipes
 		Recipes.registerModRecipe(new Recipe(
-				"assassinsbackupplan",
+				"mmt_assassinsbackupplan",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
@@ -90,7 +90,7 @@ public class MoreMergedTrinkets {
 		).showAfter("assassinscowl"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"arcticexplorersequipment",
+				"mmt_arcticexplorersequipment",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
@@ -103,7 +103,7 @@ public class MoreMergedTrinkets {
 		).showAfter("spikedbatboots"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"calmingminershelmet",
+				"mmt_calmingminershelmet",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
@@ -113,29 +113,28 @@ public class MoreMergedTrinkets {
 		).showAfter("toolbox"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"komatsupc210-10m0",
+				"mmt_komatsupc210-10m0",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("calmingminershelmet", 1),
+						new Ingredient("mmt_calmingminershelmet", 1),
 						new Ingredient("toolbox", 1),
 				}
-		).showAfter("calmingminershelmet"));
+		).showAfter("mmt_calmingminershelmet"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"arcticadventurersequipment",
+				"mmt_arcticadventurersequipment",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
-						new Ingredient("arcticexplorersequipment", 1),
+						new Ingredient("mmt_arcticexplorersequipment", 1),
 						new Ingredient("ancientrelics", 1),
-						new Ingredient("lifependant", 1),
-						//new Ingredient("calmingminersequipment", 1),
+						new Ingredient("lifependant", 1)
 				}
-		).showAfter("arcticexplorersequipment"));
+		).showAfter("mmt_arcticexplorersequipment"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"odinsbalancedfrostfiresoul",
+				"mmt_odinsbalancedfrostfiresoul",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
@@ -149,7 +148,7 @@ public class MoreMergedTrinkets {
 		).showAfter("balancedfrostfirefoci"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"necromancersbrooch",
+				"mmt_necromancersbrooch",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
@@ -159,7 +158,7 @@ public class MoreMergedTrinkets {
 		).showAfter("hysteriatablet"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"gamblersblessing",
+				"mmt_gamblersblessing",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
@@ -170,7 +169,7 @@ public class MoreMergedTrinkets {
 
 		// Singularities
 		Recipes.registerModRecipe(new Recipe(
-				"woodsingularity",
+				"mmt_woodsingularity",
 				1,
 				RecipeTechRegistry.NONE,
 				new Ingredient[]{
@@ -179,143 +178,143 @@ public class MoreMergedTrinkets {
 		).showAfter("woodboat"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"coppersingularity",
+				"mmt_coppersingularity",
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
 						new Ingredient("copperbar", 111),
-						new Ingredient("woodsingularity", 1),
+						new Ingredient("mmt_woodsingularity", 1),
 				}
 		).showAfter("copperbow"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"ironsingularity",
+				"mmt_ironsingularity",
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
 						new Ingredient("ironbar", 111),
-						new Ingredient("coppersingularity", 1),
+						new Ingredient("mmt_coppersingularity", 1),
 				}
 		).showAfter("ironbow"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"goldsingularity",
+				"mmt_goldsingularity",
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
 						new Ingredient("goldbar", 111),
-						new Ingredient("ironsingularity", 1),
+						new Ingredient("mmt_ironsingularity", 1),
 				}
 		).showAfter("goldbow"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"frostsingularity",
+				"mmt_frostsingularity",
 				1,
 				RecipeTechRegistry.IRON_ANVIL,
 				new Ingredient[]{
 						new Ingredient("frostshard", 111),
-						new Ingredient("goldsingularity", 1),
+						new Ingredient("mmt_goldsingularity", 1),
 				}
 		).showAfter("froststaff"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"demonicsingularity",
+				"mmt_demonicsingularity",
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
 						new Ingredient("demonicbar", 111),
-						new Ingredient("frostsingularity", 1),
+						new Ingredient("mmt_frostsingularity", 1),
 				}
 		).showAfter("demonicbow"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"voidsingularity",
+				"mmt_voidsingularity",
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
 						new Ingredient("voidshard", 111),
-						new Ingredient("demonicsingularity", 1),
+						new Ingredient("mmt_demonicsingularity", 1),
 				}
 		).showAfter("demonicboots"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"quartzsingularity",
+				"mmt_quartzsingularity",
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
 						new Ingredient("quartz", 111),
-						new Ingredient("voidsingularity", 1),
+						new Ingredient("mmt_voidsingularity", 1),
 				}
 		).showAfter("quartzstaff"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"ivysingularity",
+				"mmt_ivysingularity",
 				1,
 				RecipeTechRegistry.DEMONIC,
 				new Ingredient[]{
 						new Ingredient("ivybar", 111),
-						new Ingredient("quartzsingularity", 1),
+						new Ingredient("mmt_quartzsingularity", 1),
 				}
 		).showAfter("boulderstaff"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"tungstensingularity",
+				"mmt_tungstensingularity",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("tungstenbar", 111),
-						new Ingredient("ivysingularity", 1),
+						new Ingredient("mmt_ivysingularity", 1),
 				}
 		).showAfter("tungstenbow"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"obsidiansingularity",
+				"mmt_obsidiansingularity",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("obsidian", 111),
-						new Ingredient("tungstensingularity", 1),
+						new Ingredient("mmt_tungstensingularity", 1),
 				}
 		).showAfter("cookingstation"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"shadowsingularity",
+				"mmt_shadowsingularity",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("ectoplasm", 111),
 						new Ingredient("bone", 111),
-						new Ingredient("obsidiansingularity", 1),
+						new Ingredient("mmt_obsidiansingularity", 1),
 				}
 		).showAfter("tungstenboots"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"glacialsingularity",
+				"mmt_glacialsingularity",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("glacialbar", 111),
-						new Ingredient("shadowsingularity", 1),
+						new Ingredient("mmt_shadowsingularity", 1),
 				}
 		).showAfter("glacialbow"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"myceliumsingularity",
+				"mmt_myceliumsingularity",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("myceliumbar", 111),
-						new Ingredient("glacialsingularity", 1),
+						new Ingredient("mmt_glacialsingularity", 1),
 				}
 		).showAfter("myceliumshovel"));
 
 		Recipes.registerModRecipe(new Recipe(
-				"ancientsingularity",
+				"mmt_ancientsingularity",
 				1,
 				RecipeTechRegistry.ADVANCED_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("ancientfossilbar", 111),
-						new Ingredient("myceliumsingularity", 1),
+						new Ingredient("mmt_myceliumsingularity", 1),
 				}
 		).showAfter("ancientdredgingstaff"));
 	}

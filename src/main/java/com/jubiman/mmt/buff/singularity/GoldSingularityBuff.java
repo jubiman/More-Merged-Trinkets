@@ -14,7 +14,7 @@ public class GoldSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 7));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 7));
 		return tooltips;
 	}
 }

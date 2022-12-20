@@ -17,10 +17,10 @@ public class NecromancersBroochBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(Localization.translate("itemtooltip", "necromancershield1"));
-		tooltips.add(Localization.translate("itemtooltip", "necromancershield2"));
-		tooltips.add(Localization.translate("itemtooltip", "necromancershield3"));
-		tooltips.add(Localization.translate("itemtooltip", "necromancershield4"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_necromancershield1"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_necromancershield2"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_necromancershield3"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_necromancershield4"));
 		return tooltips;
 	}
 }

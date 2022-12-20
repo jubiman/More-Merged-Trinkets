@@ -20,7 +20,7 @@ import java.awt.geom.Point2D;
 public class ArcticAdventurersEquipmentBuff extends OutOfCombatBuff {
 
 	public void tickEffect(ActiveBuff buff, Mob owner) {
-		((ArcticExplorersEquipmentBuff) BuffRegistry.getBuff("arcticexplorersequipment")).tickEffect(buff, owner);
+		((ArcticExplorersEquipmentBuff) BuffRegistry.getBuff("mmt_arcticexplorersequipment")).tickEffect(buff, owner);
 	}
 
 	@Override
@@ -28,15 +28,15 @@ public class ArcticAdventurersEquipmentBuff extends OutOfCombatBuff {
 		activeBuff.setModifier(BuffModifiers.DASH_STACKS, 2);
 		activeBuff.setModifier(BuffModifiers.DASH_COOLDOWN, -.5f);
 		activeBuff.setModifier(BuffModifiers.COMBAT_REGEN_FLAT, 2.5f);
-		((ArcticExplorersEquipmentBuff) BuffRegistry.getBuff("arcticexplorersequipment")).updateActive(activeBuff, b);
+		((ArcticExplorersEquipmentBuff) BuffRegistry.getBuff("mmt_arcticexplorersequipment")).updateActive(activeBuff, b);
 		//ArcticExplorersEquipmentBuff.buffs(activeBuff, b);
 	}
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(Localization.translate("itemtooltip", "arcticadventurersequipment1"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticadventurersequipment2"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticadventurersequipment3"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticadventurersequipment1"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticadventurersequipment2"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticadventurersequipment3"));
 		ArcticExplorersEquipmentBuff.tooltips(tooltips);
 		return tooltips;
 	}

@@ -14,7 +14,7 @@ public class AncientSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 55));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 55));
 		return tooltips;
 	}
 }

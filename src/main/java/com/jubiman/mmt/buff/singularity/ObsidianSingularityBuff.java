@@ -14,7 +14,7 @@ public class ObsidianSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 35));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 35));
 		return tooltips;
 	}
 }

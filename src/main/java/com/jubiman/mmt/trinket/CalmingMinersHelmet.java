@@ -10,11 +10,11 @@ public class CalmingMinersHelmet extends TrinketItem {
 
 	public CalmingMinersHelmet() {
 		super(Rarity.EPIC, 1000);
-		addDisabledBy("komatsupc210-10m0");
+		addDisabledBy("mmt_komatsupc210-10m0");
 	}
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("calmingminershelmet")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_calmingminershelmet")};
 	}
 }

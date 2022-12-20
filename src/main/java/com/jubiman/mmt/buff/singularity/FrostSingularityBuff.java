@@ -14,7 +14,7 @@ public class FrostSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 10));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 10));
 		return tooltips;
 	}
 }

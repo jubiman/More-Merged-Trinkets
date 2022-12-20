@@ -20,13 +20,13 @@ import java.awt.geom.Point2D;
 
 public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 	public static void tooltips(ListGameTooltips tooltips) {
-		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment1"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment2"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment3"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment4"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment5"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment6"));
-		tooltips.add(Localization.translate("itemtooltip", "arcticexplorersequipment7"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticexplorersequipment1"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticexplorersequipment2"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticexplorersequipment3"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticexplorersequipment4"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticexplorersequipment5"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticexplorersequipment6"));
+		tooltips.add(Localization.translate("itemtooltip", "mmt_arcticexplorersequipment7"));
 	}
 
 	@Override

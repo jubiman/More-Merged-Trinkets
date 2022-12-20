@@ -12,6 +12,6 @@ public class GamblersBlessing extends TrinketItem {
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("gamblersblessing")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_gamblersblessing")};
 	}
 }

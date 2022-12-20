@@ -8,11 +8,11 @@ import necesse.inventory.item.trinketItem.TrinketItem;
 public class ArcticExplorersEquipment extends TrinketItem {
 	public ArcticExplorersEquipment() {
 		super(Rarity.EPIC, 1000);
-		addDisabledBy("arcticadventurersequipment");
+		addDisabledBy("mmt_arcticadventurersequipment");
 	}
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("arcticexplorersequipment")};
+		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_arcticexplorersequipment")};
 	}
 }

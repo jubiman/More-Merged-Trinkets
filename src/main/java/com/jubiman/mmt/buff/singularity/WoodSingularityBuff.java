@@ -14,7 +14,7 @@ public class WoodSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 1));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 1));
 		return tooltips;
 	}
 }

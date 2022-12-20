@@ -14,7 +14,7 @@ public class CopperSingularityBuff extends TrinketBuff {
 
 	public ListGameTooltips getTrinketTooltip() {
 		ListGameTooltips tooltips = super.getTrinketTooltip();
-		tooltips.add(String.format(Localization.translate("itemtooltip", "singularity"), 3));
+		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 3));
 		return tooltips;
 	}
 }
