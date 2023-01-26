@@ -1,10 +1,13 @@
 package com.jubiman.mmt.buff.singularity;
 
 import necesse.engine.localization.Localization;
+import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.buffs.BuffModifiers;
 import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.TrinketBuff;
 import necesse.gfx.gameTooltips.ListGameTooltips;
+import necesse.inventory.InventoryItem;
+import necesse.inventory.item.trinketItem.TrinketItem;
 
 public class CopperSingularityBuff extends TrinketBuff {
 	@Override
@@ -12,8 +15,9 @@ public class CopperSingularityBuff extends TrinketBuff {
 		activeBuff.setModifier(BuffModifiers.ALL_DAMAGE, 0.03f);
 	}
 
-	public ListGameTooltips getTrinketTooltip() {
-		ListGameTooltips tooltips = super.getTrinketTooltip();
+	@Override
+	public ListGameTooltips getTrinketTooltip(TrinketItem trinketItem, InventoryItem item, PlayerMob perspective) {
+		ListGameTooltips tooltips = super.getTrinketTooltip(trinketItem, item, perspective);
 		tooltips.add(String.format(Localization.translate("itemtooltip", "mmt_singularity"), 3));
 		return tooltips;
 	}

@@ -1,16 +1,14 @@
 package com.jubiman.mmt;
 
-import com.jubiman.mmt.buff.*;
 import com.jubiman.mmt.buff.KomatsuPC210_10M0;
+import com.jubiman.mmt.buff.*;
 import com.jubiman.mmt.buff.singularity.*;
 import com.jubiman.mmt.trinket.*;
 import com.jubiman.mmt.trinket.singularity.*;
 import necesse.engine.modLoader.annotations.ModEntry;
-import necesse.engine.registries.*;
-import necesse.inventory.InventoryItem;
-import necesse.inventory.item.Item;
-import necesse.inventory.item.armorItem.BootsArmorItem;
-import necesse.inventory.item.armorItem.ChestArmorItem;
+import necesse.engine.registries.BuffRegistry;
+import necesse.engine.registries.ItemRegistry;
+import necesse.engine.registries.RecipeTechRegistry;
 import necesse.inventory.recipe.Ingredient;
 import necesse.inventory.recipe.Recipe;
 import necesse.inventory.recipe.Recipes;

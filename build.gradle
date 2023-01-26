@@ -7,8 +7,8 @@ plugins {
 
 project.ext.modID = "com.jubiman.mmt"
 project.ext.modName = "More Merged Trinkets"
-project.ext.modVersion = "1.4"
-project.ext.gameVersion = "0.21.27"
+project.ext.modVersion = "1.5"
+project.ext.gameVersion = "0.21.28"
 project.ext.modDescription = "Creates further merged trinkets. Gotta wear them all!"
 project.ext.author = "Jubiman"
 

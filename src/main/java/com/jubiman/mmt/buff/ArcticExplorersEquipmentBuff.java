@@ -4,14 +4,15 @@ import necesse.engine.localization.Localization;
 import necesse.engine.registries.BuffRegistry;
 import necesse.engine.util.GameRandom;
 import necesse.entity.mobs.Mob;
-import necesse.entity.mobs.MobHitEvent;
+import necesse.entity.mobs.MobBeforeHitEvent;
+import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.buffs.BuffModifiers;
 import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.OutOfCombatBuff;
-import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.TrinketBuff;
 import necesse.entity.particle.Particle;
 import necesse.gfx.gameTooltips.ListGameTooltips;
-import necesse.inventory.item.trinketItem.CombinedTrinketItem;
+import necesse.inventory.InventoryItem;
+import necesse.inventory.item.trinketItem.TrinketItem;
 import necesse.level.gameTile.GameTile;
 import necesse.level.gameTile.LiquidTile;
 
@@ -37,7 +38,7 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 			if (owner.inLiquid()) {
 				GameTile tile = owner.getLevel().getTile(owner.getX() / 32, owner.getY() / 32);
 				if (tile.isLiquid) {
-					color = ((LiquidTile)tile).getLiquidColor(owner.getLevel(), owner.getX() / 32, owner.getY() / 32).brighter();
+					color = ((LiquidTile) tile).getLiquidColor(owner.getLevel(), owner.getX() / 32, owner.getY() / 32).brighter();
 				} else {
 					color = new Color(89, 139, 224);
 				}
@@ -52,7 +53,7 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 				pos = new Point2D.Float(owner.x, owner.y + (next ? -4 : 4));
 			}
 			(owner.getLevel()).entityManager
-					.addParticle(pos.x + (float)(GameRandom.globalRandom.nextGaussian() * 2.0D), pos.y + (float)(GameRandom.globalRandom.nextGaussian() * 2.0D), Particle.GType.IMPORTANT_COSMETIC)
+					.addParticle(pos.x + (float) (GameRandom.globalRandom.nextGaussian() * 2.0D), pos.y + (float) (GameRandom.globalRandom.nextGaussian() * 2.0D), Particle.GType.IMPORTANT_COSMETIC)
 					.color(color)
 					.sizeFades(10, 12)
 					.movesConstant(owner.dx / 10.0F, owner.dy / 10.0F)
@@ -76,14 +77,17 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 		}
 	}
 
-	public void onAttacked(ActiveBuff buff, MobHitEvent hitEvent) {
-		super.onAttacked(buff, hitEvent);
-		if (!hitEvent.isPrevented())
-			hitEvent.mob.buffManager.addBuff(new ActiveBuff(BuffRegistry.Debuffs.CHILLED, hitEvent.mob, 2.0F, hitEvent.attacker), hitEvent.mob.getLevel().isServerLevel());
+	@Override
+	public void onBeforeAttacked(ActiveBuff buff, MobBeforeHitEvent event) {
+		super.onBeforeAttacked(buff, event);
+		if (!event.isPrevented())
+			event.target.buffManager.addBuff(new ActiveBuff(BuffRegistry.Debuffs.CHILLED, event.target, 2.0F, event.attacker), event.target.getLevel().isServerLevel());
+
 	}
 
-	public ListGameTooltips getTrinketTooltip() {
-		ListGameTooltips tooltips = super.getTrinketTooltip();
+	@Override
+	public ListGameTooltips getTrinketTooltip(TrinketItem trinketItem, InventoryItem item, PlayerMob perspective) {
+		ListGameTooltips tooltips = super.getTrinketTooltip(trinketItem, item, perspective);
 		tooltips(tooltips);
 		return tooltips;
 	}
