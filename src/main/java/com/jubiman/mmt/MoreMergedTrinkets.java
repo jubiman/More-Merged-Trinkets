@@ -9,9 +9,15 @@ import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.engine.registries.BuffRegistry;
 import necesse.engine.registries.ItemRegistry;
 import necesse.engine.registries.RecipeTechRegistry;
+import necesse.gfx.gameTexture.GameTexture;
+import necesse.inventory.item.Item;
+import necesse.inventory.item.trinketItem.CactusShieldTrinketItem;
+import necesse.inventory.item.trinketItem.ShieldTrinketItem;
 import necesse.inventory.recipe.Ingredient;
 import necesse.inventory.recipe.Recipe;
 import necesse.inventory.recipe.Recipes;
+
+import java.lang.reflect.Field;
 
 @ModEntry
 public class MoreMergedTrinkets {
@@ -70,6 +76,20 @@ public class MoreMergedTrinkets {
 		ItemRegistry.registerItem("mmt_glacialsingularity", new GlacialSingularity(), 777, true);
 		ItemRegistry.registerItem("mmt_myceliumsingularity", new MyceliumSingularity(), 3333, true);
 		ItemRegistry.registerItem("mmt_ancientsingularity", new AncientSingularity(), 7777, true);
+	}
+
+	private static Field getField(Class<?> clazz, String fieldName)
+			throws NoSuchFieldException {
+		try {
+			return clazz.getDeclaredField(fieldName);
+		} catch (NoSuchFieldException e) {
+			Class<?> superClass = clazz.getSuperclass();
+			if (superClass == null) {
+				throw e;
+			} else {
+				return getField(superClass, fieldName);
+			}
+		}
 	}
 
 	public void postInit() {
