@@ -7,8 +7,8 @@ plugins {
 
 project.ext.modID = "com.jubiman.mmt"
 project.ext.modName = "More Merged Trinkets"
-project.ext.modVersion = "1.6"
-project.ext.gameVersion = "0.21.28"
+project.ext.modVersion = "1.7"
+project.ext.gameVersion = "0.21.29"
 project.ext.modDescription = "Creates further merged trinkets. Gotta wear them all!"
 project.ext.author = "Jubiman"
 
@@ -28,8 +28,15 @@ project.ext.clientside = false
 //project.ext.modOptionalDependencies = ["optional.modid1", "optional.modid2"]
 
 // The path to the games install directory
-def gameDirectory = "E:/SteamGames/steamapps/common/Necesse"
-
+def gameDirectory
+import org.apache.tools.ant.taskdefs.condition.Os
+if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+    gameDirectory = "E:/SteamGames/steamapps/common/Necesse"
+} else if (Os.isFamily(Os.FAMILY_UNIX)) {
+    gameDirectory = "/home/jubiman/.local/share/Steam/steamapps/common/Necesse"
+} else {
+    throw new Exception("Unsupported OS")
+}
 // =================================================
 // ========== DO NOT EDIT BELOW THIS LINE ==========
 // =================================================
