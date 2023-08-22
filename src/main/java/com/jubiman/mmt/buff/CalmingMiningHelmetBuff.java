@@ -15,7 +15,7 @@ public class CalmingMiningHelmetBuff extends TrinketBuff {
 		activeBuff.setModifier(BuffModifiers.TOOL_DAMAGE, 1f);
 		activeBuff.setModifier(BuffModifiers.MINING_SPEED, .75f);
 		activeBuff.setModifier(BuffModifiers.MINING_RANGE, -2f);
-		activeBuff.setModifier(BuffModifiers.MOB_SPAWN_RATE, 0.4f);
+		activeBuff.setModifier(BuffModifiers.MOB_SPAWN_RATE, -0.4f);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class KomatsuPC210_10M0 extends TrinketBuff {
 		activeBuff.setModifier(BuffModifiers.BUILD_RANGE, 2f);
 		activeBuff.setModifier(BuffModifiers.BUILDING_SPEED, .75f);
 		activeBuff.setModifier(BuffModifiers.ITEM_PICKUP_RANGE, 7f);
-		activeBuff.setModifier(BuffModifiers.MOB_SPAWN_RATE, .4f);
+		activeBuff.setModifier(BuffModifiers.MOB_SPAWN_RATE, -.4f);
 	}
 
 	public static void tooltips(ListGameTooltips tooltips) {
