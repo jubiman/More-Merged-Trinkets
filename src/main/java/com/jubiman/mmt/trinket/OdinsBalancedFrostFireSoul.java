@@ -1,6 +1,5 @@
 package com.jubiman.mmt.trinket;
 
-import necesse.inventory.item.trinketItem.CactusShieldTrinketItem;
 import necesse.inventory.item.trinketItem.CombinedTrinketItem;
 
 public class OdinsBalancedFrostFireSoul extends CombinedTrinketItem {
