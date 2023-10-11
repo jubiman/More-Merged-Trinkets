@@ -13,8 +13,6 @@ import necesse.inventory.recipe.Ingredient;
 import necesse.inventory.recipe.Recipe;
 import necesse.inventory.recipe.Recipes;
 
-import java.lang.reflect.Field;
-
 @ModEntry
 public class MoreMergedTrinkets {
 
@@ -28,6 +26,8 @@ public class MoreMergedTrinkets {
 		BuffRegistry.registerBuff("mmt_arcticexplorersequipment", new ArcticExplorersEquipmentBuff());
 		BuffRegistry.registerBuff("mmt_arcticadventurersequipment", new ArcticAdventurersEquipmentBuff());
 		BuffRegistry.registerBuff("mmt_gamblersblessing", new GamblersBlessingBuff());
+		BuffRegistry.registerBuff("mmt_fylgjaamulet", new FylgjaAmuletBuff());
+		BuffRegistry.registerBuff("mmt_hexedfylgjaamulet", new HexedFylgjaAmuletBuff());
 
 		// SingularityBuffs
 		BuffRegistry.registerBuff("mmt_woodsingularity", new WoodSingularityBuff());
@@ -55,6 +55,8 @@ public class MoreMergedTrinkets {
 		ItemRegistry.registerItem("mmt_calmingminershelmet", new CalmingMinersHelmet(), 777, true);
 		ItemRegistry.registerItem("mmt_komatsupc210-10m0", new com.jubiman.mmt.trinket.KomatsuPC210_10M0(), 7777, true);
 		ItemRegistry.registerItem("mmt_gamblersblessing", new GamblersBlessing(), 7777, true);
+		ItemRegistry.registerItem("mmt_fylgjaamulet", new FylgjaAmulet(), 3333, true);
+		ItemRegistry.registerItem("mmt_hexedfylgjaamulet", new HexedFylgjaAmulet(), 6666, true);
 
 		// Singularities
 		ItemRegistry.registerItem("mmt_woodsingularity", new WoodSingularity(), 3, true);
@@ -72,20 +74,6 @@ public class MoreMergedTrinkets {
 		ItemRegistry.registerItem("mmt_glacialsingularity", new GlacialSingularity(), 777, true);
 		ItemRegistry.registerItem("mmt_myceliumsingularity", new MyceliumSingularity(), 3333, true);
 		ItemRegistry.registerItem("mmt_ancientsingularity", new AncientSingularity(), 7777, true);
-	}
-
-	private static Field getField(Class<?> clazz, String fieldName)
-			throws NoSuchFieldException {
-		try {
-			return clazz.getDeclaredField(fieldName);
-		} catch (NoSuchFieldException e) {
-			Class<?> superClass = clazz.getSuperclass();
-			if (superClass == null) {
-				throw e;
-			} else {
-				return getField(superClass, fieldName);
-			}
-		}
 	}
 
 	public void postInit() {
@@ -180,6 +168,27 @@ public class MoreMergedTrinkets {
 						new Ingredient("fuzzydice", 1),
 				}
 		).showAfter("balancedfrostfirefoci"));
+
+		Recipes.registerModRecipe(new Recipe(
+				"mmt_fylgjaamulet",
+				1,
+				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				new Ingredient[]{
+						new Ingredient("scryingcards", 1),
+						new Ingredient("nightmaretalisman", 1),
+						new Ingredient("spellstone", 3),
+				}
+		).showAfter("scryingcards"));
+
+		Recipes.registerModRecipe(new Recipe(
+				"mmt_hexedfylgjaamulet",
+				1,
+				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				new Ingredient[]{
+						new Ingredient("mmt_fylgjaamulet", 1),
+						new Ingredient("forbiddenspellbook", 6)
+				}
+		).showAfter("mmt_fylgjaamulet"));
 
 		// Singularities
 		Recipes.registerModRecipe(new Recipe(

@@ -13,6 +13,8 @@ import necesse.inventory.item.trinketItem.TrinketItem;
 
 public class ArcticAdventurersEquipmentBuff extends OutOfCombatBuff {
 
+	private static final ArcticExplorersEquipmentBuff buff = (ArcticExplorersEquipmentBuff) BuffRegistry.getBuff("mmt_arcticexplorersequipment");
+
 	public void tickEffect(ActiveBuff buff, Mob owner) {
 		((ArcticExplorersEquipmentBuff) BuffRegistry.getBuff("mmt_arcticexplorersequipment")).tickEffect(buff, owner);
 	}
@@ -22,7 +24,7 @@ public class ArcticAdventurersEquipmentBuff extends OutOfCombatBuff {
 		activeBuff.setModifier(BuffModifiers.DASH_STACKS, 2);
 		activeBuff.setModifier(BuffModifiers.DASH_COOLDOWN, -.5f);
 		activeBuff.setModifier(BuffModifiers.COMBAT_REGEN_FLAT, 2.5f);
-		((ArcticExplorersEquipmentBuff) BuffRegistry.getBuff("mmt_arcticexplorersequipment")).updateActive(activeBuff, b);
+		buff.updateActive(activeBuff, b);
 	}
 
 	@Override
