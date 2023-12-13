@@ -5,13 +5,14 @@ import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.buffs.BuffModifiers;
 import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.TrinketBuff;
+import necesse.entity.mobs.buffs.BuffEventSubscriber;
 import necesse.gfx.gameTooltips.ListGameTooltips;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.item.trinketItem.TrinketItem;
 
 public class CalmingMiningHelmetBuff extends TrinketBuff {
 	@Override
-	public void init(ActiveBuff activeBuff) {
+	public void init(ActiveBuff activeBuff, BuffEventSubscriber buffEventSubscriber) {
 		activeBuff.setModifier(BuffModifiers.TOOL_DAMAGE, 1f);
 		activeBuff.setModifier(BuffModifiers.MINING_SPEED, .75f);
 		activeBuff.setModifier(BuffModifiers.MINING_RANGE, -2f);

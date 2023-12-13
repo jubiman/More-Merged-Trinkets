@@ -4,6 +4,7 @@ import necesse.engine.localization.Localization;
 import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import necesse.entity.mobs.buffs.BuffModifiers;
+import necesse.entity.mobs.buffs.BuffEventSubscriber;
 import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.TrinketBuff;
 import necesse.gfx.gameTooltips.ListGameTooltips;
 import necesse.inventory.InventoryItem;
@@ -31,7 +32,7 @@ public class KomatsuPC210_10M0 extends TrinketBuff {
 	}
 
 	@Override
-	public void init(ActiveBuff activeBuff) {
+	public void init(ActiveBuff activeBuff, BuffEventSubscriber buffEventSubscriber) {
 		buffs(activeBuff);
 	}
 
