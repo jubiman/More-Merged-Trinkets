@@ -6,8 +6,9 @@ import necesse.entity.mobs.PlayerMob;
 import necesse.entity.mobs.buffs.ActiveBuff;
 import net.bytebuddy.asm.Advice;
 
-@ModMethodPatch(target = PlayerMob.class, name = "applyLoadData", arguments = {LoadData.class})
 public class PlayerLoadPatch {
+@ModMethodPatch(target = PlayerMob.class, name = "applyLoadData", arguments = {LoadData.class})
+public static class applyLoadDataPatch {
     @Advice.OnMethodExit
     static void onApplyLoadData(@Advice.This PlayerMob playerMob, @Advice.Argument(0) LoadData loadData) {
         ActiveBuff buff = playerMob.buffManager.getBuff("mmt_komatsupc210-10m0");
@@ -16,8 +17,9 @@ public class PlayerLoadPatch {
         }
         if (buff != null) {
             if (buff.getGndData().getBoolean("active")) {
-                PlayerControlPatch.isToggled = true;
+                PlayerControlPatch.tickControlsPatch.isToggled = true;
             }
         }
     }
+}
 }

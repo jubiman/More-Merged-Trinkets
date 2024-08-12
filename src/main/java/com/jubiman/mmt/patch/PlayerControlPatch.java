@@ -15,8 +15,9 @@ import net.bytebuddy.asm.Advice;
 
 import java.awt.Color;
 
-@ModMethodPatch(target = PlayerMob.class, name = "tickControls", arguments = {MainGame.class, boolean.class, GameCamera.class})
 public class PlayerControlPatch {
+@ModMethodPatch(target = PlayerMob.class, name = "tickControls", arguments = {MainGame.class, boolean.class, GameCamera.class})
+public static class tickControlsPatch {
     public static boolean isToggled = false; // apparently this is inverted but i cba to fix it everywhere so i just change where we reassign it
 
     @Advice.OnMethodExit
@@ -55,4 +56,5 @@ public class PlayerControlPatch {
             return y;
         }
     }
+}
 }

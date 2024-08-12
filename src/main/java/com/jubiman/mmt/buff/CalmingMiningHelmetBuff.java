@@ -20,29 +20,29 @@ public class CalmingMiningHelmetBuff extends ToggleActiveBuff {
         activeBuff.setModifier(BuffModifiers.MOB_SPAWN_RATE, b ? -0.4f : 0f);
     }
     
-	@Override
-	protected void updateActive(ActiveBuff activeBuff, boolean b) {
-		buffs(activeBuff, b);
-	}
+  @Override
+  protected void updateActive(ActiveBuff activeBuff, boolean b) {
+    buffs(activeBuff, b);
+  }
 
-	@Override
-	protected boolean isNextActive(ActiveBuff activeBuff) { // this method should probably be called shouldToggleActive
-        return PlayerControlPatch.isToggled;
-	}
+  @Override
+  protected boolean isNextActive(ActiveBuff activeBuff) { // this method should probably be called shouldToggleActive
+        return PlayerControlPatch.tickControlsPatch.isToggled;
+  }
 
-	@Override
-	public void init(ActiveBuff activeBuff, BuffEventSubscriber buffEventSubscriber) {
-        buffs(activeBuff, !PlayerControlPatch.isToggled);
+  @Override
+  public void init(ActiveBuff activeBuff, BuffEventSubscriber buffEventSubscriber) {
+        buffs(activeBuff, !PlayerControlPatch.tickControlsPatch.isToggled);
     }
 
-	@Override
-	public ListGameTooltips getTrinketTooltip(TrinketItem trinketItem, InventoryItem item, PlayerMob perspective) {
-		ListGameTooltips tooltips = super.getTrinketTooltip(trinketItem, item, perspective);
-		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet1"));
-		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet2"));
-		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet3"));
-		tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet4"));
+  @Override
+  public ListGameTooltips getTrinketTooltip(TrinketItem trinketItem, InventoryItem item, PlayerMob perspective) {
+    ListGameTooltips tooltips = super.getTrinketTooltip(trinketItem, item, perspective);
+    tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet1"));
+    tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet2"));
+    tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet3"));
+    tooltips.add(Localization.translate("itemtooltip", "mmt_calmingmininghelmet4"));
         tooltips.add(Localization.translate("ui", "hotkeytip", "hotkey", "[input=" + MoreMergedTrinkets.TOGGLE_MMT_BUFFS.id + "]"));
         return tooltips;
-	}
+  }
 }
