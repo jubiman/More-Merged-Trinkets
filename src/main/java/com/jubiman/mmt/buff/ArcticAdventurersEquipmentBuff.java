@@ -23,7 +23,7 @@ public class ArcticAdventurersEquipmentBuff extends OutOfCombatBuff {
 	protected void updateActive(ActiveBuff activeBuff, boolean b) {
 		activeBuff.setModifier(BuffModifiers.DASH_STACKS, 2);
 		activeBuff.setModifier(BuffModifiers.DASH_COOLDOWN, -.5f);
-		activeBuff.setModifier(BuffModifiers.COMBAT_REGEN_FLAT, 2.5f);
+		activeBuff.setModifier(BuffModifiers.COMBAT_HEALTH_REGEN_FLAT, 2.5f);
 		buff.updateActive(activeBuff, b);
 	}
 

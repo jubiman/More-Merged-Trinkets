@@ -7,8 +7,8 @@ plugins {
 
 project.ext.modID = "com.jubiman.mmt"
 project.ext.modName = "More Merged Trinkets"
-project.ext.modVersion = "1.8.1"
-project.ext.gameVersion = "0.23.0"
+project.ext.modVersion = "1.9.1"
+project.ext.gameVersion = "0.26.0"
 project.ext.modDescription = "Creates further merged trinkets. Gotta wear them all!"
 project.ext.author = "Jubiman"
 
@@ -31,7 +31,7 @@ project.ext.clientside = false
 def gameDirectory
 import org.apache.tools.ant.taskdefs.condition.Os
 if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-    gameDirectory = "E:/SteamGames/steamapps/common/Necesse"
+    gameDirectory = "C:/Program Files (x86)/Steam/steamapps/common/Necesse"
 } else if (Os.isFamily(Os.FAMILY_UNIX)) {
     gameDirectory = "/home/jubiman/.local/share/Steam/steamapps/common/Necesse"
 } else {
@@ -107,9 +107,9 @@ task runClient(type: JavaExec) {
 
     classpath = files(gameDirectory + "/Necesse.jar")
 
-    main = "StartClient"
+    main = "StartSteamClient"
     jvmArgs "-Xms512m", "-Xmx3G", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseG1GC", "-XX:G1NewSizePercent=20", "-XX:G1ReservePercent=20", "-XX:MaxGCPauseMillis=50", "-XX:G1HeapRegionSize=32M"
-    args "-mod \"${buildLocation}\""
+    args "-dev", "-mod \"${buildLocation}\""
 }
 
 task runDevClient(type: JavaExec) {
@@ -119,7 +119,7 @@ task runDevClient(type: JavaExec) {
 
     classpath = files(gameDirectory + "/Necesse.jar")
 
-    main = "StartClient"
+    main = "StartSteamClient"
     jvmArgs "-Xms512m", "-Xmx3G", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseG1GC", "-XX:G1NewSizePercent=20", "-XX:G1ReservePercent=20", "-XX:MaxGCPauseMillis=50", "-XX:G1HeapRegionSize=32M"
     args "-dev 1", "-mod \"${buildLocation}\""
 }
@@ -131,7 +131,7 @@ task runServer(type: JavaExec) {
 
     classpath = files(gameDirectory + "/Server.jar")
 
-    main = "StartServer"
+    main = "StartDesktopServer"
     jvmArgs "-Xms512m", "-Xmx3G", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseG1GC", "-XX:G1NewSizePercent=20", "-XX:G1ReservePercent=20", "-XX:MaxGCPauseMillis=50", "-XX:G1HeapRegionSize=32M"
     args "-mod \"${buildLocation}\""
 }
@@ -143,7 +143,9 @@ task buildModJar(type: Jar) {
 
     // Add mod output
     from sourceSets.main.java.outputDir
-
+    // Add the dependencies
+//    from configurations.libDepends.collect { it.isDirectory() ? it : zipTree(it) }
+    
     archiveName "${jarName}.jar"
     destinationDir file(buildLocation)
 }

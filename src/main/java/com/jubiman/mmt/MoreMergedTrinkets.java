@@ -5,6 +5,7 @@ import com.jubiman.mmt.buff.*;
 import com.jubiman.mmt.buff.singularity.*;
 import com.jubiman.mmt.trinket.*;
 import com.jubiman.mmt.trinket.singularity.*;
+import necesse.engine.input.Control;
 import necesse.engine.modLoader.annotations.ModEntry;
 import necesse.engine.registries.BuffRegistry;
 import necesse.engine.registries.ItemRegistry;
@@ -15,6 +16,7 @@ import necesse.inventory.recipe.Recipes;
 
 @ModEntry
 public class MoreMergedTrinkets {
+	public static Control TOGGLE_MMT_BUFFS = new Control(76, "mmt_toggle_buffs");
 
 	public void init() {
 		System.out.println("MMT init");
@@ -74,6 +76,9 @@ public class MoreMergedTrinkets {
 		ItemRegistry.registerItem("mmt_glacialsingularity", new GlacialSingularity(), 777, true);
 		ItemRegistry.registerItem("mmt_myceliumsingularity", new MyceliumSingularity(), 3333, true);
 		ItemRegistry.registerItem("mmt_ancientsingularity", new AncientSingularity(), 7777, true);
+
+		// Add controls
+		Control.addModControl(TOGGLE_MMT_BUFFS);
 	}
 
 	public void postInit() {

@@ -47,7 +47,7 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 			}
 			boolean next = buff.getGndData().getBoolean("pAlt");
 			buff.getGndData().setBoolean("pAlt", !next);
-			if (owner.dir == 0 || owner.dir == 2) {
+			if (owner.getDir() == 0 || owner.getDir() == 2) {
 				pos = new Point2D.Float(owner.x + (next ? -4 : 4), owner.y);
 			} else {
 				pos = new Point2D.Float(owner.x, owner.y + (next ? -4 : 4));
@@ -81,7 +81,7 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 	public void onBeforeAttacked(ActiveBuff buff, MobBeforeHitEvent event) {
 		super.onBeforeAttacked(buff, event);
 		if (!event.isPrevented())
-			event.target.buffManager.addBuff(new ActiveBuff(BuffRegistry.Debuffs.CHILLED, event.target, 2.0F, event.attacker), event.target.getLevel().isServerLevel());
+			event.target.buffManager.addBuff(new ActiveBuff(BuffRegistry.Debuffs.CHILLED, event.target, 2.0F, event.attacker), event.target.getLevel().isServer());
 
 	}
 

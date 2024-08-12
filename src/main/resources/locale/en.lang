@@ -61,3 +61,10 @@ mmt_hexedfylgjaamulet2=Increases max mana by 666%
 mmt_hexedfylgjaamulet3=Increases magic damage by 333%,
 mmt_hexedfylgjaamulet4=but increases mana usage by 666%
 mmt_singularity=+%d%% to all damage
+
+[controls]
+mmt_toggle_buffs=Toggle Buffs
+
+[misc]
+mmt_buffson=Toggled Buffs On
+mmt_buffsoff=Toggled Buffs Off
