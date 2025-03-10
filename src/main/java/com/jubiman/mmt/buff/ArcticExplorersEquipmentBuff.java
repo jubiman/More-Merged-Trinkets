@@ -16,7 +16,7 @@ import necesse.inventory.item.trinketItem.TrinketItem;
 import necesse.level.gameTile.GameTile;
 import necesse.level.gameTile.LiquidTile;
 
-import java.awt.*;
+import java.awt.Color;
 import java.awt.geom.Point2D;
 
 public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
@@ -67,7 +67,6 @@ public class ArcticExplorersEquipmentBuff extends OutOfCombatBuff {
 		activeBuff.setModifier(BuffModifiers.SPEED, 0.35f);
 		activeBuff.setModifier(BuffModifiers.ATTACK_SPEED, 0.10f);
 		activeBuff.setModifier(BuffModifiers.KNOCKBACK_INCOMING_MOD, 0f);
-		activeBuff.setModifier(BuffModifiers.EMITS_LIGHT, true);
 		activeBuff.setMinModifier(BuffModifiers.FRICTION, 1.0f);
 		activeBuff.setModifier(BuffModifiers.TRAVEL_DISTANCE, 1);
 		activeBuff.setModifier(BuffModifiers.BIOME_VIEW_DISTANCE, 1);

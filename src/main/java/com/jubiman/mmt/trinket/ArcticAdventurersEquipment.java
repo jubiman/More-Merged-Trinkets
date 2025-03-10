@@ -9,10 +9,18 @@ public class ArcticAdventurersEquipment extends TrinketItem {
 	public ArcticAdventurersEquipment() {
 		super(Rarity.LEGENDARY, 1000);
 		addDisables("mmt_arcticexplorersequipment");
+		addDisables("spikedbatboots");
+		addDisables("explorersatchel");
+		addDisables("explorercloak");
+		addDisables("demonclaw");
+		addDisables("polarclaw");
 	}
 
 	@Override
 	public TrinketBuff[] getBuffs(InventoryItem inventoryItem) {
-		return new TrinketBuff[]{(TrinketBuff) BuffRegistry.getBuff("mmt_arcticadventurersequipment")};
+		return new TrinketBuff[]{
+				(TrinketBuff) BuffRegistry.getBuff("mmt_arcticadventurersequipment"),
+				(TrinketBuff) BuffRegistry.getBuff("shinebelttrinket"),
+		};
 	}
 }

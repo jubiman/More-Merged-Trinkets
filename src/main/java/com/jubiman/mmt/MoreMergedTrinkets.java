@@ -22,6 +22,7 @@ public class MoreMergedTrinkets {
 		System.out.println("MMT init");
 
 		// Buffs
+		BuffRegistry.registerBuff("mmt_assassinsbackupplan", new AssassinsBackupPlanBuff());
 		BuffRegistry.registerBuff("mmt_necromancersbrooch", new NecromancersBroochBuff());
 		BuffRegistry.registerBuff("mmt_calmingminershelmet", new CalmingMiningHelmetBuff());
 		BuffRegistry.registerBuff("mmt_komatsupc210-10m0", new KomatsuPC210_10M0());
@@ -30,6 +31,7 @@ public class MoreMergedTrinkets {
 		BuffRegistry.registerBuff("mmt_gamblersblessing", new GamblersBlessingBuff());
 		BuffRegistry.registerBuff("mmt_fylgjaamulet", new FylgjaAmuletBuff());
 		BuffRegistry.registerBuff("mmt_hexedfylgjaamulet", new HexedFylgjaAmuletBuff());
+		BuffRegistry.registerBuff("mmt_demonicaegis", new DemonicAegisBuff());
 
 		// SingularityBuffs
 		BuffRegistry.registerBuff("mmt_woodsingularity", new WoodSingularityBuff());
@@ -59,6 +61,7 @@ public class MoreMergedTrinkets {
 		ItemRegistry.registerItem("mmt_gamblersblessing", new GamblersBlessing(), 7777, true);
 		ItemRegistry.registerItem("mmt_fylgjaamulet", new FylgjaAmulet(), 3333, true);
 		ItemRegistry.registerItem("mmt_hexedfylgjaamulet", new HexedFylgjaAmulet(), 6666, true);
+		ItemRegistry.registerItem("mmt_demonicaegis", new DemonicAegis(), 3333, true);
 
 		// Singularities
 		ItemRegistry.registerItem("mmt_woodsingularity", new WoodSingularity(), 3, true);
@@ -86,20 +89,21 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_assassinsbackupplan",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.FALLEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("ammobox", 1),
 						new Ingredient("assassinscowl", 1),
 						new Ingredient("bonehilt", 1),
 						new Ingredient("magicalquiver", 1),
 						new Ingredient("ninjasmark", 1),
+						new Ingredient("foolsgambit", 1),
 				}
 		).showAfter("assassinscowl"));
 
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_arcticexplorersequipment",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("spikedbatboots", 1),
 						new Ingredient("explorersatchel", 1),
@@ -112,7 +116,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_calmingminershelmet",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("calmingminersbouquet", 1),
 						new Ingredient("miningcharm", 1),
@@ -122,7 +126,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_komatsupc210-10m0",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.FALLEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("mmt_calmingminershelmet", 1),
 						new Ingredient("toolbox", 1),
@@ -132,7 +136,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_arcticadventurersequipment",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.FALLEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("mmt_arcticexplorersequipment", 1),
 						new Ingredient("ancientrelics", 1),
@@ -143,7 +147,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_odinsbalancedfrostfiresoul",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.FALLEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("frenzyorb", 1),
 						new Ingredient("balancedfrostfirefoci", 1),
@@ -157,7 +161,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_necromancersbrooch",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("hysteriatablet", 1),
 						new Ingredient("scryingmirror", 1),
@@ -167,7 +171,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_gamblersblessing",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("luckycape", 1),
 						new Ingredient("fuzzydice", 1),
@@ -177,7 +181,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_fylgjaamulet",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("scryingcards", 1),
 						new Ingredient("nightmaretalisman", 1),
@@ -188,12 +192,26 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_hexedfylgjaamulet",
 				1,
-				RecipeTechRegistry.ADVANCED_WORKSTATION,
+				RecipeTechRegistry.FALLEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("mmt_fylgjaamulet", 1),
 						new Ingredient("forbiddenspellbook", 6)
 				}
 		).showAfter("mmt_fylgjaamulet"));
+
+		Recipes.registerModRecipe(new Recipe(
+				"mmt_demonicaegis",
+				1,
+				RecipeTechRegistry.IRON_ANVIL,
+				new Ingredient[]{
+						new Ingredient("claygauntlet", 1),
+						new Ingredient("challengerspauldron", 1),
+						new Ingredient("manica", 1),
+						new Ingredient("clockworkheart", 1),
+						new Ingredient("demonicbar", 10),
+						new Ingredient("upgradeshard", 5),
+				}
+		));
 
 		// Singularities
 		Recipes.registerModRecipe(new Recipe(
