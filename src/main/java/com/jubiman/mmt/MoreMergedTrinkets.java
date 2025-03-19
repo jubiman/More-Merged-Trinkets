@@ -89,7 +89,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_assassinsbackupplan",
 				1,
-				RecipeTechRegistry.FALLEN_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("ammobox", 1),
 						new Ingredient("assassinscowl", 1),
@@ -126,7 +126,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_komatsupc210-10m0",
 				1,
-				RecipeTechRegistry.FALLEN_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("mmt_calmingminershelmet", 1),
 						new Ingredient("toolbox", 1),
@@ -136,7 +136,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_arcticadventurersequipment",
 				1,
-				RecipeTechRegistry.FALLEN_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("mmt_arcticexplorersequipment", 1),
 						new Ingredient("ancientrelics", 1),
@@ -147,7 +147,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_odinsbalancedfrostfiresoul",
 				1,
-				RecipeTechRegistry.FALLEN_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("frenzyorb", 1),
 						new Ingredient("balancedfrostfirefoci", 1),
@@ -192,7 +192,7 @@ public class MoreMergedTrinkets {
 		Recipes.registerModRecipe(new Recipe(
 				"mmt_hexedfylgjaamulet",
 				1,
-				RecipeTechRegistry.FALLEN_WORKSTATION,
+				RecipeTechRegistry.TUNGSTEN_WORKSTATION,
 				new Ingredient[]{
 						new Ingredient("mmt_fylgjaamulet", 1),
 						new Ingredient("forbiddenspellbook", 6)
