@@ -4,10 +4,11 @@ import necesse.engine.registries.BuffRegistry;
 import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.TrinketBuff;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.item.trinketItem.TrinketItem;
+import necesse.inventory.lootTable.presets.TrinketsLootTable;
 
 public class GoldSingularity extends TrinketItem {
 	public GoldSingularity() {
-		super(Rarity.NORMAL, 7);
+		super(Rarity.NORMAL, 7, TrinketsLootTable.trinkets);
 	}
 
 	@Override

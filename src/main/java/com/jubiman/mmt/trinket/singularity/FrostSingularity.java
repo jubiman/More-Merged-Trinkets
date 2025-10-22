@@ -4,10 +4,11 @@ import necesse.engine.registries.BuffRegistry;
 import necesse.entity.mobs.buffs.staticBuffs.armorBuffs.trinketBuffs.TrinketBuff;
 import necesse.inventory.InventoryItem;
 import necesse.inventory.item.trinketItem.TrinketItem;
+import necesse.inventory.lootTable.presets.TrinketsLootTable;
 
 public class FrostSingularity extends TrinketItem {
 	public FrostSingularity() {
-		super(Rarity.COMMON, 10);
+		super(Rarity.COMMON, 10, TrinketsLootTable.trinkets);
 	}
 
 	@Override
